@@ -1,0 +1,13 @@
+#ifndef HARMONIC_H
+#define HARMONIC_H
+#include "potential.h"
+class harmonic_bond:public potential
+{
+public:
+    harmonic_bond();
+    void print(ofstream out);
+    void printTerminal();
+
+};
+
+#endif // HARMONIC_H
