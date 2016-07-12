@@ -7,7 +7,6 @@
 #include "input.h"
 #include "mix.h"
 #include <stdlib.h>
-#include "help.h"
 #include "fepatoms.h"
 #include <sstream>
 #include <iomanip>

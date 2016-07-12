@@ -212,11 +212,12 @@ int main(int argc,char *argv[])
 
         }
 
-    }catch (help &h)
+    }catch(exception & e)
     {
-        cout << h.what()<<endl;
-        return -1;
+        std::cerr << "Error : " << e.what() << '\n';
     }
+
+
 
     return 0;
 }

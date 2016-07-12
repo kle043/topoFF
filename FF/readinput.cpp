@@ -289,7 +289,7 @@ readInput::readInput(string fn):filename(fn)
         }
     }else
     {
-        throw help("Could not open input file");
+        throw invalid_argument("Could not open input file");
 
     }
 

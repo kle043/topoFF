@@ -45,8 +45,16 @@ void cSystemSorter::sortOnDistance(cSortPotential *inp1)
 
         cselection s1,s2;
 
-        s1(sys,szSel1);
-        s2(sys,szSel2);
+        try
+        {
+
+            s1(sys,szSel1);
+            s2(sys,szSel2);
+
+        }catch(invalid_argument & e)
+        {
+            std::cerr << "Invalid argument: " << e.what() << '\n';
+        }
 
         //cout<<s1.num()<<" "<<s2.num()<<endl;
 

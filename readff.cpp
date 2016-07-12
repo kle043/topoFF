@@ -304,7 +304,7 @@ readFF::readFF(const vector<string> &f): files(f)
         }else
         {
             string n="Could not open ff file"+*itFiles;
-            throw help(n);
+            throw invalid_argument(n);
             cout<<"ERROR:: Could not open file!!!"<<endl;
         }
 

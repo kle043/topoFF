@@ -59,7 +59,6 @@ HEADERS += \
     FF/morse_bond.h \
     FF/harmonic_dihedral.h \
     FF/opls_dihedral.h \
-    FF/help.h \
     FF/coullong.h \
     FF/harmonic_improper.h \
     FF/cvff_improper.h \

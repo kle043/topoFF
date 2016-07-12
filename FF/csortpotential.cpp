@@ -191,7 +191,7 @@ void cSortPotential::sortData(readInput &inputData, readFF &ffData, bool op, boo
     if (inputData.getPairIds().empty())
     {
 
-        throw help("Pair ids not found, returning now");
+        throw invalid_argument("Pair ids not found, returning now");
         //cout<<" \n";
         //return;
 

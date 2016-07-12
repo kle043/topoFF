@@ -16,7 +16,6 @@
 #include "harmonic_dihedral.h"
 #include "cvff_improper.h"
 #include "opls_dihedral.h"
-#include "help.h"
 #include <ctype.h>
 #include <sstream>
 using namespace std;
