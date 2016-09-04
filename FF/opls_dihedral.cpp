@@ -48,3 +48,8 @@ void opls_dihedral::printHOOMD(ofstream &out, double e, double d)
         cout<<"Could not write to file\n";
     }
 }
+
+void opls_dihedral::printLatex(ofstream &out, double e)
+{
+    out<<"      "<<getName1()<<"-"<<getName2()<<"-"<<getName3()<<"-"<<getName4()<<" & "<<K1*e<<" & "<<K2*e<<" & "<<K3*e<<" & "<<K4*e<<" \\\\ \n";
+}

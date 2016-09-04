@@ -9,6 +9,7 @@ public:
     double getD(){return d;}
     void print(ofstream &out);
     void printHOOMD(ofstream & out,double e, double d);
+    void printLatex(ofstream & out,double e);
 
 private:
     double d;

@@ -99,6 +99,12 @@ void lennardJones::printHOOMD(ofstream &out, double e, double d)
 
 }
 
+void lennardJones::printLatex(ofstream &out, double e)
+{
+    out<<"      "<<getName1()<<" & "<<getName2()<<" & "<<getEpsilon()*e<<" & "<<getSigma()<<" \\\\ \n";
+
+}
+
 
 void lennardJones::print(ofstream &out)
 {

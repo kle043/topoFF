@@ -79,3 +79,10 @@ void harmonic_bond::printTerminal()
               <<getName1()<<" "<<getName2()<<" "<< getFile()<< endl;
 
 }
+
+void harmonic_bond::printLatex(ofstream &out, double e)
+{
+    out<<"      "<<getName1()<<" - "<<getName2()<<" & "<<getK()*e<<" & "<<getReq()<<" \\\\ \n";
+
+
+}

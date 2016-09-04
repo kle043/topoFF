@@ -11,6 +11,7 @@ public:
     void printTerminal();
     double getAngle(){return angle;}
     void printHOOMD(ofstream &out,double e, double d);
+    void printLatex(ofstream & out,double e);
     virtual double getDistParam(){return angle;}
 private:
     double angle;

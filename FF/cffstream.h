@@ -8,6 +8,7 @@ public:
     cffStream(cSortPotential &pot);
     void writeLammps(string file);
     void writeHoomd(string file);
+    void writeLatex(string file);
 
 private:
     bool vecHasStyle(vector<potential *> p, string s);

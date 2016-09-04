@@ -9,6 +9,7 @@ public:
     harmonic_improper(int i, string n1, string n2, string n3, string n4, double k, double n, string uni, string f);
     void print(ofstream &out);
     void printHOOMD(ofstream &out, double e, double d);
+    void printLatex(ofstream & out,double e);
 };
 
 #endif // HARMONIC_IMPROPER_H

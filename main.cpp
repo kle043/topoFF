@@ -181,7 +181,13 @@ int main(int argc,char *argv[])
 
         string outFile=inFile.substr(0,found);
 
-        if(parse.has("-lmp"))
+        if (parse.has("-latex"))
+        {
+           ffStream.writeLatex(outFile);
+
+
+
+        } else if(parse.has("-lmp"))
         {
 
             ffStream.writeLammps(outFile);

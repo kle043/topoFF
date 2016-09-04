@@ -46,3 +46,8 @@ void harmonic_dihedral::print(ofstream &out)
         cout<<"Could not write to file\n";
     }
 }
+
+void harmonic_dihedral::printLatex(ofstream &out, double e)
+{
+    out<<"      "<<getName1()<<"-"<<getName2()<<"-"<<getName3()<<"-"<<getName4()<<" & "<<getK()*e<<" & "<<getD()<<" & "<<getAngle()<<"\\\\ \n";
+}

@@ -47,3 +47,9 @@ void harmonic_improper::printHOOMD(ofstream &out, double e, double d)
     }
 
 }
+
+void harmonic_improper::printLatex(ofstream &out, double e)
+{
+    out<<getName1()<<"-"<<getName2()<<"-"<<getName3()<<"-"<<getName4()<<" & "<<getK()*e<<" & "<<getAngle()<<"\\\\ \n";
+
+}

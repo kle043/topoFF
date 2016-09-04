@@ -44,3 +44,9 @@ void cvff_improper::printHOOMD(ofstream &out, double e, double d)
     }
 
 }
+
+void cvff_improper::printLatex(ofstream &out, double e)
+{
+    out<<"      "<<getName1()<<"-"<<getName2()<<"-"<<getName3()<<"-"<<getName4()<<" & "<<getK()*e<<" & "<<getD()<<" & "<<getAngle()<<" \\\\ \n";
+
+}

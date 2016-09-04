@@ -9,6 +9,7 @@ public:
     harmonic_dihedral(string n1, string n2, string n3, string n4, double k, double ind, double n, string uni, string f);
     void print(ofstream &out);
     double getD(){return d;}
+    void printLatex(ofstream & out,double e);
 
 private:
     double d;

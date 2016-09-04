@@ -57,3 +57,8 @@ void coulLong::printHOOMD(ofstream &out, double e, double d)
 {
 
 }
+
+void coulLong::printLatex(ofstream &out, double e)
+{
+
+}

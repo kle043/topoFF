@@ -12,6 +12,7 @@ public:
     double const & getEpsilon () {return epsilon;}
     double const & getSigma () {return sigma;}
     void printHOOMD(ofstream &out,double e, double d);
+    void printLatex(ofstream & out,double e);
     void print(ofstream &out);
     virtual void printTerminal();
     virtual lennardJones * clone() {return new lennardJones(*this);}

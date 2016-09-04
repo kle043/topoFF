@@ -432,6 +432,91 @@ void cffStream::writeHoomd(string file)
 
 }
 
+void cffStream::writeLatex(string file)
+{
+    filename=file+".tex";
+
+    outfile.open(filename.c_str());
+
+
+    double energy=4.184; //convert kj/mol
+    //energy=1;
+
+    string tableStart="\\begin{table}[hbtp]\n      \\centering\n      \\caption{ }\n     \\begin{tabular}";
+
+    string tableStop="\\bottomrule\n     \\end{tabular}\n  \\end{table}\n ";
+
+
+
+    outfile<<tableStart+"{cccc}\n";
+    outfile<<"      \\toprule\n";
+
+    for (itPotential=vecPa.begin();itPotential!=vecPa.end();itPotential++)
+    {
+        if((*itPotential)->getStyleName()=="lj")
+        {
+
+        (*itPotential)->printLatex(outfile,energy);
+
+        }
+    }
+
+    outfile<<tableStop;
+
+
+
+    outfile<<"\n";
+
+    outfile<<tableStart+"{ccc}\n";
+    outfile<<"      \\toprule\n";
+
+    for (itPotential=vecBn.begin();itPotential!=vecBn.end();itPotential++)
+    {
+        (*itPotential)->printLatex(outfile,energy);
+    }
+
+    outfile<<tableStop;
+
+    outfile<<"\n";
+
+    outfile<<tableStart+"{ccc}\n";
+    outfile<<"      \\toprule\n";
+
+    for (itPotential=vecAn.begin();itPotential!=vecAn.end();itPotential++)
+    {
+        (*itPotential)->printLatex(outfile,energy);
+
+    }
+    outfile<<tableStop;
+    outfile<<"\n";
+
+
+
+    outfile<<tableStart+"{cccc}\n";
+    outfile<<"      \\toprule\n";
+    for (itPotential=vecDi.begin();itPotential!=vecDi.end();itPotential++)
+    {
+        (*itPotential)->printLatex(outfile,energy);
+
+    }
+
+    outfile<<tableStop;
+    outfile<<"\n";
+
+    outfile<<tableStart+"{cccc}\n";
+    outfile<<"      \\toprule\n";
+    for (itPotential=vecIm.begin();itPotential!=vecIm.end();itPotential++)
+    {
+        (*itPotential)->printLatex(outfile,energy);
+
+
+    }
+    outfile<<tableStop;
+
+
+    cout<<"Latex Force Field written:: Look in "<<filename<<endl;
+}
+
 bool cffStream::vecHasStyle(vector<potential*> p,string s)
 {
     string style;

@@ -41,6 +41,7 @@ public:
     void setVisited( ){visited=true;}
     bool isVisited(){return visited;}
     virtual void printHOOMD(ofstream & out,double e, double d){out<<style<<" missing HOOMD\n";}
+    virtual void printLatex(ofstream & out,double e){out<<style<<" missing Latex\n";}
     virtual void print(ofstream & out)=0;
     virtual vector<double> & getParameters(){return vecParameters;}
     void addParameter(double i){vecParameters.push_back(i);}

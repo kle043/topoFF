@@ -9,6 +9,7 @@ public:
     virtual void print(ofstream & out);
     virtual void printTerminal();
      void printHOOMD(ofstream &out,double e, double d);
+     void printLatex(ofstream & out,double e);
     virtual coulLong * clone() {return new coulLong(*this);}
 };
 

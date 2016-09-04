@@ -15,6 +15,7 @@ public:
     void print(ofstream &out);
     void printHOOMD(ofstream &out,double e, double d);
     void printTerminal();
+    void printLatex(ofstream & out, double e);
 
 protected:
     double K;

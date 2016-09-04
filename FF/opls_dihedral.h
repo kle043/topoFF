@@ -7,6 +7,7 @@ public:
     opls_dihedral(string n1, string n2, string n3, string n4, double k1, double k2, double k3, double k4, string uni, string f);
     void print(ofstream &out);
     void printHOOMD(ofstream &out,double e, double d);
+    void printLatex(ofstream & out,double e);
 
 private:
     double K1,K2,K3,K4;

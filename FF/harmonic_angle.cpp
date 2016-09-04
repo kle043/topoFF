@@ -64,3 +64,10 @@ void harmonic_angle::printHOOMD(ofstream &out, double e, double d)
     }
 
 }
+
+void harmonic_angle::printLatex(ofstream &out, double e)
+{
+    out<<"      "<<getName1()<<"-"<<getName2()<<"-"<<getName3()<<" & "<<getK()*e<<" & "<<getAngle()<<" \\\\ \n";
+
+
+}
