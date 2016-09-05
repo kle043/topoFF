@@ -19,3 +19,9 @@ void cSite::print(ofstream &out)
 
 
 }
+
+void cSite::printLatex(ofstream &out)
+{
+    out<<getName()<<" & "<<getCharge()<<" \\\\ \n";
+
+}

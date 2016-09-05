@@ -513,6 +513,16 @@ void cffStream::writeLatex(string file)
     }
     outfile<<tableStop;
 
+    outfile<<tableStart+"{cc}\n";
+    outfile<<"      \\toprule\n";
+
+    for (itSite=vecSite.begin();itSite!=vecSite.end();itSite++)
+    {
+        (*itSite)->printLatex(outfile);
+
+    }
+    outfile<<tableStop;
+
 
     cout<<"Latex Force Field written:: Look in "<<filename<<endl;
 }

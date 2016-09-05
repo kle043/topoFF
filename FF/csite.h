@@ -15,6 +15,7 @@ public:
     double getCharge(){return charge;}
     int getIdx(){return id;}
     void print (ofstream &out);
+    void printLatex (ofstream &out);
 
 private:
     string name;
